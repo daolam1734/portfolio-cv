@@ -1,5 +1,7 @@
 import React from 'react';
 import './index.css';
+import { FiMail, FiMapPin, FiPhone, FiGithub, FiCalendar, FiUser, FiSettings, FiBriefcase, FiCode, FiAward, FiTarget } from 'react-icons/fi';
+import { FaGraduationCap } from 'react-icons/fa';
 
 function App() {
   return (
@@ -18,33 +20,25 @@ function App() {
             <h1>ĐÀO CÔNG HOÀNG LAM</h1>
             <h2>FULL-STACK DEVELOPER | AI APPLICATIONS</h2>
             <div className="contact-info">
-              <a href="mailto:daolam1734@gmail.com">✉ daolam1734@gmail.com</a>
-              <span>⌖ Trà Vinh, Việt Nam</span>
-              <span>☎ +84 343 166 883</span>
-              <a href="https://github.com/daolam1734" target="_blank" rel="noreferrer">◉ github.com/daolam1734</a>
+              <a href="mailto:daolam1734@gmail.com"><FiMail /> daolam1734@gmail.com</a>
+              <span><FiMapPin /> Vĩnh Long, Việt Nam</span>
+              <span><FiPhone /> +84 343 166 883</span>
+              <a href="https://github.com/daolam1734" target="_blank" rel="noreferrer"><FiGithub /> github.com/daolam1734</a>
             </div>
           </div>
 
           <div className="header-right">
             <div className="header-edu-item">
-              <span className="icon">🎓</span>
+              <span className="icon"><FaGraduationCap /></span>
               <div>
                 <strong>Đại học Trà Vinh</strong>
                 <p>Trường Kỹ thuật và Công nghệ<br />Khoa Công nghệ thông tin</p>
               </div>
             </div>
             <div className="header-edu-item">
-              <span className="icon">📅</span>
+              <span className="icon"><FiCalendar /></span>
               <div>
                 <strong>2022 – 2026</strong>
-                <p>(Dự kiến tốt nghiệp)</p>
-              </div>
-            </div>
-            <div className="header-edu-item">
-              <span className="icon">📊</span>
-              <div>
-                <strong>GPA: 3.3/4.0</strong>
-                <p>(nếu có)</p>
               </div>
             </div>
           </div>
@@ -55,7 +49,7 @@ function App() {
           <aside className="cv-left animate-fade-in delay-1">
 
             <section>
-              <h2>👤 TÓM TẮT CHUYÊN MÔN</h2>
+              <h2><FiUser /> TÓM TẮT CHUYÊN MÔN</h2>
               <p className="text-justify text-sm">
                 Sinh viên Kỹ thuật Phần mềm định hướng Full-stack Development
                 và AI Applications, có kinh nghiệm phát triển frontend, backend,
@@ -66,17 +60,7 @@ function App() {
             </section>
 
             <section>
-              <h2>🎓 HỌC VẤN</h2>
-              <div className="cv-item-vertical">
-                <h3>ĐẠI HỌC TRÀ VINH</h3>
-                <p className="text-sm">Trường Kỹ thuật và Công nghệ – Khoa Công nghệ thông tin</p>
-                <p className="text-sm"><strong>Ngành:</strong> Công nghệ thông tin / Kỹ thuật Phần mềm</p>
-                <p className="text-secondary" style={{ marginTop: '0.5rem' }}>2022 – 2026 (Dự kiến tốt nghiệp)</p>
-              </div>
-            </section>
-
-            <section>
-              <h2>⚙️ KỸ NĂNG</h2>
+              <h2><FiSettings /> KỸ NĂNG</h2>
 
               <div className="skill-group">
                 <strong>Ngôn ngữ lập trình</strong>
@@ -127,10 +111,10 @@ function App() {
           <div className="cv-right animate-fade-in delay-2">
 
             <section>
-              <h2>💼 KINH NGHIỆM THỰC TẬP</h2>
+              <h2><FiBriefcase /> KINH NGHIỆM THỰC TẬP</h2>
               <div className="timeline-header">
                 <span className="date-badge">06/2026 – 08/2026</span>
-                <span className="location">📍 Trà Vinh</span>
+                <span className="location"><FiMapPin /> Trà Vinh</span>
               </div>
               <h3 className="job-title">THỰC TẬP SINH – VIỆN PHÁT TRIỂN NGUỒN LỰC, ĐẠI HỌC TRÀ VINH</h3>
               <p className="project-name"><strong>Dự án:</strong> Auto-Slide Creator – Chuyển đổi tài liệu thành Slides tùy chỉnh</p>
@@ -144,7 +128,7 @@ function App() {
             </section>
 
             <section>
-              <h2>💻 DỰ ÁN HỌC TẬP NỔI BẬT</h2>
+              <h2><FiCode /> DỰ ÁN HỌC TẬP NỔI BẬT</h2>
 
               <div className="project-item">
                 <h3>TVU – Hệ thống quản lý hồ sơ viên chức đi nước ngoài</h3>
@@ -198,7 +182,7 @@ function App() {
             </section>
 
             <section>
-              <h2>📜 CHỨNG CHỈ</h2>
+              <h2><FiAward /> CHỨNG CHỈ</h2>
               <div className="cert-item">
                 <h3>Google UX Design Professional Certificate</h3>
                 <p className="text-secondary">Google / Coursera &nbsp;|&nbsp; 09/11/2025</p>
@@ -206,7 +190,7 @@ function App() {
             </section>
 
             <section>
-              <h2>🎯 ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
+              <h2><FiTarget /> ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
               <p className="text-justify text-sm">
                 Tìm kiếm cơ hội thực tập / Fresher ở vị trí <strong>Full-stack Developer</strong> hoặc <strong>AI Application Developer</strong>, nơi có thể áp dụng kiến thức và kỹ năng để xây dựng các sản phẩm thực tế và tạo ra giá trị cho người dùng.
               </p>
