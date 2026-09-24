@@ -6,163 +6,79 @@ function App() {
     <div className="container">
       {/* ================= HEADER ================= */}
       <header className="cv-header animate-fade-in">
-        <div>
-          <p className="cv-label">SOFTWARE ENGINEERING STUDENT</p>
-
-          <h1 className="text-gradient">
-            ĐÀO CÔNG HOÀNG LAM
-          </h1>
-
-          <h2>Full-stack Developer | AI Applications</h2>
-
+        <div className="header-left">
+          <div className="profile-img">
+            {/* Thay src bằng link ảnh của bạn */}
+            <img src="https://i.pravatar.cc/300" alt="Profile" />
+          </div>
+        </div>
+        
+        <div className="header-center">
+          <h1>ĐÀO CÔNG HOÀNG LAM</h1>
+          <h2>FULL-STACK DEVELOPER | AI APPLICATIONS</h2>
           <div className="contact-info">
-            <a href="mailto:daolam7134@gmail.com">
-              ✉ daolam7134@gmail.com
-            </a>
-
-            <a
-              href="https://github.com/daolam1734"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ◉ github.com/daolam1734
-            </a>
-
-            <span>☎ [Số điện thoại]</span>
-
-            <span>⌖ [Tỉnh/Thành phố]</span>
+            <a href="mailto:daolam7134@gmail.com">✉ daolam7134@gmail.com</a>
+            <span>⌖ Trà Vinh, Việt Nam</span>
+            <span>☎ +84 3xx xxx xxx</span>
+            <a href="https://github.com/daolam1734" target="_blank" rel="noreferrer">◉ github.com/daolam1734</a>
+          </div>
+        </div>
+        
+        <div className="header-right">
+          <div className="header-edu-item">
+            <span className="icon">🎓</span>
+            <div>
+              <strong>Đại học Trà Vinh</strong>
+              <p>Trường Kỹ thuật và Công nghệ<br/>Khoa Công nghệ thông tin</p>
+            </div>
+          </div>
+          <div className="header-edu-item">
+            <span className="icon">📅</span>
+            <div>
+              <strong>2022 – 2026</strong>
+              <p>(Dự kiến tốt nghiệp)</p>
+            </div>
+          </div>
+          <div className="header-edu-item">
+            <span className="icon">📊</span>
+            <div>
+              <strong>GPA: 3.3/4.0</strong>
+              <p>(nếu có)</p>
+            </div>
           </div>
         </div>
       </header>
 
-      <main>
-        {/* ================= SUMMARY ================= */}
-        <section className="glass animate-fade-in delay-1">
-          <h2>TÓM TẮT CHUYÊN MÔN</h2>
+      <main className="cv-layout">
+        {/* ================= CỘT TRÁI ================= */}
+        <aside className="cv-left animate-fade-in delay-1">
+          
+          <section className="glass">
+            <h2>👤 TÓM TẮT CHUYÊN MÔN</h2>
+            <p className="text-justify text-sm">
+              Sinh viên Kỹ thuật Phần mềm định hướng Full-stack Development
+              và AI Applications, có kinh nghiệm phát triển frontend, backend,
+              cơ sở dữ liệu và tích hợp LLM/AI API.<br/><br/>
+              Tập trung xây dựng các ứng dụng web thực tế, có khả năng
+              làm việc với React, Node.js, Python và FastAPI.
+            </p>
+          </section>
 
-          <p>
-            Sinh viên Kỹ thuật Phần mềm định hướng Full-stack Development
-            và AI Applications, có kinh nghiệm phát triển frontend, backend,
-            cơ sở dữ liệu và tích hợp LLM/AI API. Tập trung xây dựng các
-            ứng dụng web thực tế với React, Node.js, Python và FastAPI.
-          </p>
-        </section>
-
-        {/* ================= EDUCATION ================= */}
-        <section className="animate-fade-in delay-1">
-          <h2>HỌC VẤN</h2>
-
-          <div className="glass">
-            <div className="cv-item">
-              <div>
-                <h3>ĐẠI HỌC TRÀ VINH</h3>
-
-                <p>
-                  Trường Kỹ thuật và Công nghệ – Khoa Công nghệ Thông tin
-                </p>
-
-                <p>
-                  <strong>Ngành:</strong> Công nghệ Thông tin / Kỹ thuật Phần mềm
-                </p>
-              </div>
-
-              <span className="date">
-                [Thời gian học]
-              </span>
+          <section className="glass">
+            <h2>🎓 HỌC VẤN</h2>
+            <div className="cv-item-vertical">
+              <h3>ĐẠI HỌC TRÀ VINH</h3>
+              <p className="text-sm">Trường Kỹ thuật và Công nghệ – Khoa Công nghệ thông tin</p>
+              <p className="text-sm"><strong>Ngành:</strong> Công nghệ thông tin / Kỹ thuật Phần mềm</p>
+              <p className="text-secondary" style={{marginTop: '0.5rem'}}>2022 – 2026 (Dự kiến tốt nghiệp)</p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* ================= INTERNSHIP ================= */}
-        <section className="animate-fade-in delay-1">
-          <h2>KINH NGHIỆM THỰC TẬP</h2>
-
-          <div className="glass">
-            <div className="cv-item">
-              <div>
-                <h3>
-                  THỰC TẬP SINH – VIỆN PHÁT TRIỂN NGUỒN LỰC,
-                  ĐẠI HỌC TRÀ VINH
-                </h3>
-
-                <p>
-                  <strong>Dự án:</strong> Auto-Slide Creator –
-                  Chuyển đổi tài liệu thành Slides tùy chỉnh
-                </p>
-              </div>
-
-              <span className="date">
-                [Thời gian]
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* ================= PROJECTS ================= */}
-        <section className="animate-fade-in delay-2">
-          <h2>DỰ ÁN</h2>
-
-          <div className="project-list">
-            <div className="glass project-item">
-              <div className="project-header">
-                <h3>
-                  TVU – HỆ THỐNG QUẢN LÝ HỒ SƠ VIÊN CHỨC ĐI NƯỚC NGOÀI
-                </h3>
-              </div>
-
-              <div className="badges">
-                <span className="badge">React</span>
-                <span className="badge">Node.js</span>
-                <span className="badge">Express</span>
-                <span className="badge">PostgreSQL</span>
-                <span className="badge">Gemini API</span>
-                <span className="badge">Docker</span>
-              </div>
-            </div>
-
-            <div className="glass project-item">
-              <div className="project-header">
-                <h3>
-                  LinkUp – Community Chat & AI Assistant
-                </h3>
-              </div>
-
-              <div className="badges">
-                <span className="badge">React</span>
-                <span className="badge">TypeScript</span>
-                <span className="badge">Python</span>
-                <span className="badge">FastAPI</span>
-                <span className="badge">MongoDB</span>
-                <span className="badge">Gemini API</span>
-              </div>
-            </div>
-
-            <div className="glass project-item">
-              <div className="project-header">
-                <h3>
-                  GrowTech – E-commerce Laptop
-                </h3>
-              </div>
-
-              <div className="badges">
-                <span className="badge">PHP</span>
-                <span className="badge">MySQL</span>
-                <span className="badge">Bootstrap</span>
-                <span className="badge">JavaScript</span>
-                <span className="badge">AJAX</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ================= SKILLS ================= */}
-        <section className="animate-fade-in delay-2">
-          <h2>KỸ NĂNG</h2>
-
-          <div className="grid-2">
-            <div className="glass">
-              <h3>Programming</h3>
-
+          <section className="glass">
+            <h2>⚙️ KỸ NĂNG</h2>
+            
+            <div className="skill-group">
+              <strong>Ngôn ngữ lập trình</strong>
               <div className="badges">
                 <span className="badge">JavaScript</span>
                 <span className="badge">TypeScript</span>
@@ -172,98 +88,155 @@ function App() {
               </div>
             </div>
 
-            <div className="glass">
-              <h3>Frontend</h3>
-
+            <div className="skill-group">
+              <strong>Phát triển Web</strong>
               <div className="badges">
                 <span className="badge">HTML5</span>
                 <span className="badge">CSS3</span>
-                <span className="badge">React</span>
-                <span className="badge">Vite</span>
-                <span className="badge">Tailwind CSS</span>
-              </div>
-            </div>
-
-            <div className="glass">
-              <h3>Backend</h3>
-
-              <div className="badges">
+                <span className="badge">React (nếu có)</span>
                 <span className="badge">Node.js</span>
-                <span className="badge">Express</span>
-                <span className="badge">FastAPI</span>
+                <span className="badge">REST API</span>
               </div>
             </div>
 
-            <div className="glass">
-              <h3>Database</h3>
-
-              <div className="badges">
-                <span className="badge">PostgreSQL</span>
-                <span className="badge">MongoDB</span>
-                <span className="badge">MySQL</span>
-              </div>
-            </div>
-
-            <div className="glass">
-              <h3>AI / LLM</h3>
-
-              <div className="badges">
-                <span className="badge">LLM Applications</span>
-                <span className="badge">Gemini API</span>
-              </div>
-            </div>
-
-            <div className="glass">
-              <h3>Tools</h3>
-
+            <div className="skill-group">
+              <strong>Công cụ & nền tảng</strong>
               <div className="badges">
                 <span className="badge">Git</span>
                 <span className="badge">GitHub</span>
-                <span className="badge">Docker</span>
                 <span className="badge">VS Code</span>
+                <span className="badge">Postman (nếu có)</span>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* ================= CERTIFICATION ================= */}
-        <section className="animate-fade-in delay-3">
-          <h2>CHỨNG CHỈ</h2>
-
-          <div className="glass">
-            <div className="cv-item">
-              <div>
-                <h3>Google UX Design Professional Certificate</h3>
-                <p>Google / Coursera</p>
+            <div className="skill-group">
+              <strong>AI / LLM</strong>
+              <div className="badges">
+                <span className="badge">Large Language Models</span>
+                <span className="badge">Prompt Engineering</span>
+                <span className="badge">Tích hợp AI vào ứng dụng</span>
               </div>
-
-              <span className="date">
-                09/11/2025
-              </span>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* ================= CAREER OBJECTIVE ================= */}
-        <section className="glass animate-fade-in delay-3">
-          <h2>ĐỊNH HƯỚNG NGHỀ NGHIỆP</h2>
+          <section className="glass">
+            <h2>🌐 NGÔN NGỮ</h2>
+            <div className="language-item">
+              <div className="lang-header">
+                <strong>Tiếng Việt</strong>
+                <span className="lang-level">Bản ngữ</span>
+              </div>
+              <div className="lang-bar-container">
+                <div className="lang-bar"><div className="lang-fill" style={{width: '100%'}}></div></div>
+              </div>
+            </div>
+            
+            <div className="language-item">
+              <div className="lang-header">
+                <strong>Tiếng Anh</strong>
+                <span className="lang-level">Đọc hiểu tốt, giao tiếp cơ bản</span>
+              </div>
+              <div className="lang-bar-container">
+                <div className="lang-bar"><div className="lang-fill" style={{width: '65%'}}></div></div>
+              </div>
+            </div>
+          </section>
+        </aside>
 
-          <p>
-            Tìm kiếm cơ hội Internship / Fresher ở vị trí
-            <strong> Full-stack Developer </strong>
-            hoặc
-            <strong> AI Application Developer</strong>,
-            tập trung phát triển sản phẩm web và ứng dụng tích hợp AI.
-          </p>
-        </section>
+        {/* ================= CỘT PHẢI ================= */}
+        <div className="cv-right animate-fade-in delay-2">
+          
+          <section className="glass">
+            <h2>💼 KINH NGHIỆM THỰC TẬP</h2>
+            <div className="timeline-header">
+              <span className="date-badge">06/2026 – 08/2026</span>
+              <span className="location">📍 Trà Vinh</span>
+            </div>
+            <h3 className="job-title">THỰC TẬP SINH – VIỆN PHÁT TRIỂN NGUỒN LỰC, ĐẠI HỌC TRÀ VINH</h3>
+            <p className="project-name"><strong>Dự án:</strong> Auto-Slide Creator – Chuyển đổi tài liệu thành Slides tùy chỉnh</p>
+            <ul className="bullet-list">
+              <li>Tham gia xây dựng ứng dụng hỗ trợ chuyển đổi tài liệu thành các slide trình bày có thể tùy chỉnh.</li>
+              <li>Phân tích quy trình xử lý tài liệu và tổ chức nội dung phù hợp với cấu trúc bài trình chiếu.</li>
+              <li>Phát triển và hoàn thiện các chức năng của ứng dụng theo yêu cầu dự án.</li>
+              <li>Tham gia kiểm thử, phát hiện và xử lý lỗi trong quá trình phát triển.</li>
+              <li>Phối hợp với nhóm để hoàn thiện sản phẩm và cải thiện trải nghiệm người dùng.</li>
+            </ul>
+          </section>
 
-        {/* ================= FOOTER ================= */}
-        <footer>
-          <p>
-            © 2026 Đào Công Hoàng Lam
-          </p>
-        </footer>
+          <section className="glass">
+            <h2>💻 DỰ ÁN NỔI BẬT</h2>
+            
+            <div className="project-item">
+              <h3>TVU – Hệ thống quản lý hồ sơ viên chức đi nước ngoài</h3>
+              <div className="badges" style={{marginBottom: '0.75rem'}}>
+                <span className="badge">React</span>
+                <span className="badge">Node.js</span>
+                <span className="badge">Express</span>
+                <span className="badge">PostgreSQL</span>
+                <span className="badge">Gemini API</span>
+                <span className="badge">Docker</span>
+              </div>
+              <ul className="bullet-list">
+                <li>Xây dựng hệ thống quản lý hồ sơ và quy trình xử lý hồ sơ.</li>
+                <li>Phát triển giao diện frontend bằng React và quản lý trạng thái.</li>
+                <li>Tích hợp Gemini API cho các chức năng AI của hệ thống.</li>
+              </ul>
+            </div>
+
+            <div className="project-item">
+              <h3>LinkUp – Community Chat & AI Assistant</h3>
+              <div className="badges" style={{marginBottom: '0.75rem'}}>
+                <span className="badge">React</span>
+                <span className="badge">TypeScript</span>
+                <span className="badge">Python</span>
+                <span className="badge">FastAPI</span>
+                <span className="badge">MongoDB</span>
+                <span className="badge">Gemini API</span>
+              </div>
+              <ul className="bullet-list">
+                <li>Phát triển nền tảng cộng đồng với chat cá nhân và nhóm.</li>
+                <li>Xây dựng backend API bằng FastAPI/Python.</li>
+                <li>Tích hợp Google Gemini API cho AI Assistant và AI memory.</li>
+              </ul>
+            </div>
+
+            <div className="project-item">
+              <h3>GrowTech – E-commerce Laptop</h3>
+              <div className="badges" style={{marginBottom: '0.75rem'}}>
+                <span className="badge">PHP</span>
+                <span className="badge">MySQL</span>
+                <span className="badge">Bootstrap</span>
+                <span className="badge">JavaScript</span>
+                <span className="badge">AJAX</span>
+              </div>
+              <ul className="bullet-list">
+                <li>Xây dựng website thương mại điện tử chuyên về laptop.</li>
+                <li>Phát triển giỏ hàng, đặt hàng và quản lý sản phẩm.</li>
+                <li>Xây dựng khu vực quản trị và các chức năng voucher, flash sale.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="glass">
+            <h2>📜 CHỨNG CHỈ</h2>
+            <div className="cert-item">
+              <h3>Google UX Design Professional Certificate</h3>
+              <p className="text-secondary">Google / Coursera &nbsp;|&nbsp; 09/11/2025</p>
+            </div>
+          </section>
+
+          <section className="glass">
+            <h2>🎯 ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
+            <p className="text-justify text-sm">
+              Tìm kiếm cơ hội thực tập / Fresher ở vị trí <strong>Full-stack Developer</strong> hoặc <strong>AI Application Developer</strong>, nơi có thể áp dụng kiến thức và kỹ năng để xây dựng các sản phẩm thực tế và tạo ra giá trị cho người dùng.
+            </p>
+          </section>
+        </div>
       </main>
+
+      <footer>
+        <p>© 2026 Đào Công Hoàng Lam. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 }
