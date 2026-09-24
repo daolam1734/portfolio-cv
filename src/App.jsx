@@ -192,7 +192,7 @@ function App() {
             <section>
               <h2><FiTarget /> ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
               <p className="text-justify text-sm">
-                Tìm kiếm cơ hội thực tập / Fresher ở vị trí <strong>Full-stack Developer</strong> hoặc <strong>AI Application Developer</strong>, nơi có thể áp dụng kiến thức và kỹ năng để xây dựng các sản phẩm thực tế và tạo ra giá trị cho người dùng.
+                Tìm kiếm cơ hội việc làm / Fresher ở vị trí <strong>Full-stack Developer</strong> hoặc <strong>AI Application Developer</strong>, nơi có thể áp dụng kiến thức và kỹ năng để xây dựng các sản phẩm thực tế và tạo ra giá trị cho người dùng.
               </p>
             </section>
           </div>
@@ -200,7 +200,7 @@ function App() {
       </div>
 
       <footer>
-        <p>© 2026 Đào Công Hoàng Lam. All Rights Reserved.</p>
+        <p>© 2026 daolam1734. All Rights Reserved.</p>
       </footer>
     </div>
   );
