@@ -4,93 +4,265 @@ import './index.css';
 function App() {
   return (
     <div className="container">
-      <header className="animate-fade-in">
-        <h1 className="text-gradient">Nguyễn Hoàng Lâm</h1>
-        <p>Software Engineer | Creative Thinker | Problem Solver</p>
-        <div className="badges" style={{ justifyContent: 'center', marginTop: '2rem' }}>
-          <a href="#about" className="btn">About Me</a>
-          <a href="#cv" className="btn">My CV</a>
-          <a href="#cool-things" className="btn">Cool Things</a>
+      {/* ================= HEADER ================= */}
+      <header className="cv-header animate-fade-in">
+        <div>
+          <p className="cv-label">SOFTWARE ENGINEERING STUDENT</p>
+
+          <h1 className="text-gradient">
+            ĐÀO CÔNG HOÀNG LAM
+          </h1>
+
+          <h2>Full-stack Developer | AI Applications</h2>
+
+          <div className="contact-info">
+            <a href="mailto:daolam7134@gmail.com">
+              ✉ daolam7134@gmail.com
+            </a>
+
+            <a
+              href="https://github.com/daolam1734"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ◉ github.com/daolam1734
+            </a>
+
+            <span>☎ [Số điện thoại]</span>
+
+            <span>⌖ [Tỉnh/Thành phố]</span>
+          </div>
         </div>
       </header>
 
       <main>
-        {/* About Section */}
-        <section id="about" className="glass animate-fade-in delay-1">
-          <h2>About Me</h2>
+        {/* ================= SUMMARY ================= */}
+        <section className="glass animate-fade-in delay-1">
+          <h2>TÓM TẮT CHUYÊN MÔN</h2>
+
           <p>
-            Hi! I am a passionate developer who loves building beautiful, high-performance web applications. 
-            I enjoy transforming complex problems into simple, elegant, and intuitive solutions.
+            Sinh viên Kỹ thuật Phần mềm định hướng Full-stack Development
+            và AI Applications, có kinh nghiệm phát triển frontend, backend,
+            cơ sở dữ liệu và tích hợp LLM/AI API. Tập trung xây dựng các
+            ứng dụng web thực tế với React, Node.js, Python và FastAPI.
           </p>
-          <div className="badges">
-            <span className="badge">JavaScript</span>
-            <span className="badge">React</span>
-            <span className="badge">Node.js</span>
-            <span className="badge">HTML/CSS</span>
-            <span className="badge">UI/UX Design</span>
+        </section>
+
+        {/* ================= EDUCATION ================= */}
+        <section className="animate-fade-in delay-1">
+          <h2>HỌC VẤN</h2>
+
+          <div className="glass">
+            <div className="cv-item">
+              <div>
+                <h3>ĐẠI HỌC TRÀ VINH</h3>
+
+                <p>
+                  Trường Kỹ thuật và Công nghệ – Khoa Công nghệ Thông tin
+                </p>
+
+                <p>
+                  <strong>Ngành:</strong> Công nghệ Thông tin / Kỹ thuật Phần mềm
+                </p>
+              </div>
+
+              <span className="date">
+                [Thời gian học]
+              </span>
+            </div>
           </div>
         </section>
 
-        {/* CV Section */}
-        <section id="cv" className="animate-fade-in delay-2">
-          <h2>Experience & Education</h2>
+        {/* ================= INTERNSHIP ================= */}
+        <section className="animate-fade-in delay-1">
+          <h2>KINH NGHIỆM THỰC TẬP</h2>
+
+          <div className="glass">
+            <div className="cv-item">
+              <div>
+                <h3>
+                  THỰC TẬP SINH – VIỆN PHÁT TRIỂN NGUỒN LỰC,
+                  ĐẠI HỌC TRÀ VINH
+                </h3>
+
+                <p>
+                  <strong>Dự án:</strong> Auto-Slide Creator –
+                  Chuyển đổi tài liệu thành Slides tùy chỉnh
+                </p>
+              </div>
+
+              <span className="date">
+                [Thời gian]
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= PROJECTS ================= */}
+        <section className="animate-fade-in delay-2">
+          <h2>DỰ ÁN</h2>
+
+          <div className="project-list">
+            <div className="glass project-item">
+              <div className="project-header">
+                <h3>
+                  TVU – HỆ THỐNG QUẢN LÝ HỒ SƠ VIÊN CHỨC ĐI NƯỚC NGOÀI
+                </h3>
+              </div>
+
+              <div className="badges">
+                <span className="badge">React</span>
+                <span className="badge">Node.js</span>
+                <span className="badge">Express</span>
+                <span className="badge">PostgreSQL</span>
+                <span className="badge">Gemini API</span>
+                <span className="badge">Docker</span>
+              </div>
+            </div>
+
+            <div className="glass project-item">
+              <div className="project-header">
+                <h3>
+                  LinkUp – Community Chat & AI Assistant
+                </h3>
+              </div>
+
+              <div className="badges">
+                <span className="badge">React</span>
+                <span className="badge">TypeScript</span>
+                <span className="badge">Python</span>
+                <span className="badge">FastAPI</span>
+                <span className="badge">MongoDB</span>
+                <span className="badge">Gemini API</span>
+              </div>
+            </div>
+
+            <div className="glass project-item">
+              <div className="project-header">
+                <h3>
+                  GrowTech – E-commerce Laptop
+                </h3>
+              </div>
+
+              <div className="badges">
+                <span className="badge">PHP</span>
+                <span className="badge">MySQL</span>
+                <span className="badge">Bootstrap</span>
+                <span className="badge">JavaScript</span>
+                <span className="badge">AJAX</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= SKILLS ================= */}
+        <section className="animate-fade-in delay-2">
+          <h2>KỸ NĂNG</h2>
+
           <div className="grid-2">
             <div className="glass">
-              <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent-color)' }}>💼 Experience</h3>
-              <div className="timeline-item">
-                <div className="timeline-date">2023 - Present</div>
-                <div className="timeline-title">Senior Frontend Engineer</div>
-                <div className="timeline-content">
-                  Led the development of multiple scalable web applications using React and modern CSS architectures. Improved performance by 40%.
-                </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-date">2021 - 2023</div>
-                <div className="timeline-title">Web Developer</div>
-                <div className="timeline-content">
-                  Developed interactive UI components and collaborated closely with designers to ensure pixel-perfect implementation.
-                </div>
+              <h3>Programming</h3>
+
+              <div className="badges">
+                <span className="badge">JavaScript</span>
+                <span className="badge">TypeScript</span>
+                <span className="badge">Python</span>
+                <span className="badge">Java</span>
+                <span className="badge">PHP</span>
               </div>
             </div>
 
             <div className="glass">
-              <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent-color)' }}>🎓 Education</h3>
-              <div className="timeline-item">
-                <div className="timeline-date">2017 - 2021</div>
-                <div className="timeline-title">B.S. in Computer Science</div>
-                <div className="timeline-content">
-                  University of Science. Graduated with Honors. Specialized in Software Engineering and Human-Computer Interaction.
-                </div>
+              <h3>Frontend</h3>
+
+              <div className="badges">
+                <span className="badge">HTML5</span>
+                <span className="badge">CSS3</span>
+                <span className="badge">React</span>
+                <span className="badge">Vite</span>
+                <span className="badge">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div className="glass">
+              <h3>Backend</h3>
+
+              <div className="badges">
+                <span className="badge">Node.js</span>
+                <span className="badge">Express</span>
+                <span className="badge">FastAPI</span>
+              </div>
+            </div>
+
+            <div className="glass">
+              <h3>Database</h3>
+
+              <div className="badges">
+                <span className="badge">PostgreSQL</span>
+                <span className="badge">MongoDB</span>
+                <span className="badge">MySQL</span>
+              </div>
+            </div>
+
+            <div className="glass">
+              <h3>AI / LLM</h3>
+
+              <div className="badges">
+                <span className="badge">LLM Applications</span>
+                <span className="badge">Gemini API</span>
+              </div>
+            </div>
+
+            <div className="glass">
+              <h3>Tools</h3>
+
+              <div className="badges">
+                <span className="badge">Git</span>
+                <span className="badge">GitHub</span>
+                <span className="badge">Docker</span>
+                <span className="badge">VS Code</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Cool Things Section */}
-        <section id="cool-things" className="animate-fade-in delay-3">
-          <h2>Cool Things About Me</h2>
-          <div className="grid-3">
-            <div className="glass">
-              <h3 style={{ marginBottom: '1rem', color: 'var(--accent-color)' }}>🌌 Generative Art</h3>
-              <p>I write code that creates algorithmic, generative art using p5.js and canvas APIs. Merging logic with creativity.</p>
-            </div>
-            <div className="glass">
-              <h3 style={{ marginBottom: '1rem', color: 'var(--accent-color)' }}>☕ Specialty Coffee</h3>
-              <p>I am a huge coffee nerd. I roast my own beans and have mastered the art of the perfect V60 pour-over.</p>
-            </div>
-            <div className="glass">
-              <h3 style={{ marginBottom: '1rem', color: 'var(--accent-color)' }}>🕹️ Retro Gaming</h3>
-              <p>I collect and repair vintage game consoles. Nothing beats the charm of 16-bit graphics and chiptune music.</p>
+        {/* ================= CERTIFICATION ================= */}
+        <section className="animate-fade-in delay-3">
+          <h2>CHỨNG CHỈ</h2>
+
+          <div className="glass">
+            <div className="cv-item">
+              <div>
+                <h3>Google UX Design Professional Certificate</h3>
+                <p>Google / Coursera</p>
+              </div>
+
+              <span className="date">
+                09/11/2025
+              </span>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="glass animate-fade-in delay-3" style={{ textAlign: 'center' }}>
-          <h2>Let's Connect</h2>
-          <p style={{ marginBottom: '2rem' }}>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-          <a href="mailto:hello@example.com" className="btn">Say Hello</a>
+        {/* ================= CAREER OBJECTIVE ================= */}
+        <section className="glass animate-fade-in delay-3">
+          <h2>ĐỊNH HƯỚNG NGHỀ NGHIỆP</h2>
+
+          <p>
+            Tìm kiếm cơ hội Internship / Fresher ở vị trí
+            <strong> Full-stack Developer </strong>
+            hoặc
+            <strong> AI Application Developer</strong>,
+            tập trung phát triển sản phẩm web và ứng dụng tích hợp AI.
+          </p>
         </section>
+
+        {/* ================= FOOTER ================= */}
+        <footer>
+          <p>
+            © 2026 Đào Công Hoàng Lam
+          </p>
+        </footer>
       </main>
     </div>
   );
