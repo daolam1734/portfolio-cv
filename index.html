@@ -1,18 +1,275 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đào Công Hoàng Lam - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body style="background-color: #fff0f5; font-family: 'Outfit', sans-serif;">
+    <div class="container py-5">
+      <div class="cv-page p-4 p-md-5">
+        
+        <!-- Chibi Animations Container -->
+        <div class="chibi-container" style="top: 2%; left: 3%;">
+          <span class="chibi chibi-bounce">🐰</span>
+        </div>
+        <div class="chibi-container" style="top: 5%; right: 5%;">
+          <span class="chibi chibi-float">🐱</span>
+        </div>
+        <div class="chibi-container" style="bottom: 5%; left: 4%;">
+          <span class="chibi chibi-wiggle">🐻</span>
+        </div>
+        <div class="chibi-container" style="bottom: 8%; right: 4%;">
+          <span class="chibi chibi-bounce">🐹</span>
+        </div>
+        <div class="chibi-container" style="top: 45%; left: 1%;">
+          <span class="chibi chibi-pulse" style="font-size: 2rem; opacity: 0.6;">🐾</span>
+        </div>
+        <div class="chibi-container" style="top: 50%; right: 1%;">
+          <span class="chibi chibi-float" style="font-size: 2.5rem; opacity: 0.7;">🌸</span>
+        </div>
+        <div class="chibi-container" style="top: 25%; left: 45%;">
+          <span class="chibi chibi-wiggle" style="font-size: 2rem; opacity: 0.5;">✨</span>
+        </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Nguyễn Hoàng Lâm - Software Engineer Portfolio & CV. Explore my experience, skills, and cool things about me." />
-  <title>Đào Công Hoàng Lam | Portfolio & CV</title>
-</head>
+        <div class="content-wrapper">
+          <!-- HEADER -->
+          <header class="cv-header row align-items-center mb-5 pb-4 border-bottom" style="border-color: rgba(255, 105, 180, 0.2) !important;">
+            <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+              <img src="/profile.jpg" alt="Đào Công Hoàng Lam" class="profile-img shadow-sm" onerror="this.src='https://ui-avatars.com/api/?name=Hoang+Lam&background=ffe4e1&color=ff69b4&size=130'"/>
+            </div>
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 border-md-end" style="border-color: rgba(255, 105, 180, 0.2) !important;">
+              <h1 class="text-uppercase fw-bold text-primary mb-1">Đào Công Hoàng Lam</h1>
+              <h2 class="h6 text-secondary fw-medium mb-3 letter-spacing-1">FULL-STACK DEVELOPER</h2>
+              <div class="row g-2 contact-info text-start px-3 px-md-0">
+                <div class="col-sm-6">
+                  <a href="mailto:daolam7134@gmail.com" class="contact-link"><i class="bi bi-envelope me-2"></i>daolam7134@gmail.com</a>
+                </div>
+                <div class="col-sm-6 text-secondary">
+                  <i class="bi bi-telephone me-2"></i>+84 343 166 883
+                </div>
+                <div class="col-sm-6 text-secondary">
+                  <i class="bi bi-geo-alt me-2"></i>Vĩnh Long, Việt Nam
+                </div>
+                <div class="col-sm-6">
+                  <a href="https://github.com/daolam1734" target="_blank" rel="noreferrer" class="contact-link"><i class="bi bi-github me-2"></i>github.com/daolam1734</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 ps-md-4 mt-4 mt-md-0">
+              <div class="d-flex align-items-start mb-3">
+                <i class="bi bi-mortarboard fs-4 me-3 text-primary"></i>
+                <div>
+                  <strong class="d-block text-primary">Đại học Trà Vinh</strong>
+                  <p class="text-secondary small mb-0">Trường Kỹ thuật và Công nghệ<br/>Khoa Công nghệ Thông tin</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start">
+                <i class="bi bi-calendar3 fs-4 me-3 text-primary"></i>
+                <div>
+                  <strong class="d-block text-primary">2022 – 2026</strong>
+                  <p class="text-secondary small mb-0">Dự kiến tốt nghiệp</p>
+                </div>
+              </div>
+            </div>
+          </header>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+          <main class="row">
+            <!-- LEFT COLUMN -->
+            <aside class="col-lg-4 cv-left pe-lg-4">
+              <!-- SUMMARY -->
+              <section class="mb-5">
+                <h2 class="section-title"><i class="bi bi-person text-primary"></i> TÓM TẮT CHUYÊN MÔN</h2>
+                <p class="text-secondary small text-justify">
+                  Sinh viên Kỹ thuật Phần mềm định hướng <strong>Full-stack Development</strong>, có kinh nghiệm xây dựng ứng dụng web với React, TypeScript, Node.js, Python và FastAPI.
+                </p>
+                <p class="text-secondary small text-justify">
+                  Có kiến thức về phát triển frontend, backend, REST API, cơ sở dữ liệu và Git. Có kinh nghiệm tích hợp LLM/AI API vào ứng dụng thực tế.
+                </p>
+              </section>
 
+              <!-- SKILLS -->
+              <section class="mb-5">
+                <h2 class="section-title"><i class="bi bi-gear text-primary"></i> KỸ NĂNG</h2>
+                
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">Ngôn ngữ lập trình</strong>
+                  <div>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">TypeScript</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">PHP</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">Frontend</strong>
+                  <div>
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">Bootstrap 5</span>
+                    <span class="skill-badge">Vanilla JS</span>
+                    <span class="skill-badge">GSAP</span>
+                    <span class="skill-badge">Vite</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">Backend & API</strong>
+                  <div>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Express.js</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">FastAPI</span>
+                    <span class="skill-badge">REST API</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">Cơ sở dữ liệu</strong>
+                  <div>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">MongoDB</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">Software Engineering</strong>
+                  <div>
+                    <span class="skill-badge">OOP</span>
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">GitHub</span>
+                    <span class="skill-badge">Postman</span>
+                    <span class="skill-badge">Docker</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">AI / LLM</strong>
+                  <div>
+                    <span class="skill-badge">Gemini API</span>
+                    <span class="skill-badge">LLM Applications</span>
+                    <span class="skill-badge">Prompt Engineering</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <strong class="d-block mb-2 text-primary">Ngoại ngữ</strong>
+                  <p class="text-secondary small mb-0">Tiếng Anh: [Mức độ / chứng chỉ nếu có]</p>
+                </div>
+              </section>
+            </aside>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-lg-8 cv-right ps-lg-4 border-lg-start" style="border-color: rgba(255, 105, 180, 0.2) !important;">
+              <!-- EDUCATION -->
+              <section class="mb-5">
+                <h2 class="section-title"><i class="bi bi-mortarboard text-primary"></i> HỌC VẤN</h2>
+                <div class="d-flex gap-3 align-items-center mb-2">
+                  <span class="timeline-badge">2022 – 2026</span>
+                  <span class="text-secondary small"><i class="bi bi-geo-alt me-1"></i>Trà Vinh</span>
+                </div>
+                <h3 class="h5 fw-bold text-uppercase text-primary mb-1">ĐẠI HỌC TRÀ VINH</h3>
+                <p class="text-secondary mb-1">Trường Kỹ thuật và Công nghệ – Khoa Công nghệ Thông tin</p>
+                <p class="text-secondary"><strong>Chuyên ngành:</strong> Kỹ thuật Phần mềm</p>
+              </section>
+
+              <!-- EXPERIENCE -->
+              <section class="mb-5">
+                <h2 class="section-title"><i class="bi bi-briefcase text-primary"></i> KINH NGHIỆM</h2>
+                <div class="d-flex gap-3 align-items-center mb-2">
+                  <span class="timeline-badge">06/2026 – 08/2026</span>
+                  <span class="text-secondary small"><i class="bi bi-geo-alt me-1"></i>Trà Vinh</span>
+                </div>
+                <h3 class="h5 fw-bold text-uppercase text-primary mb-1">THỰC TẬP SINH</h3>
+                <p class="text-secondary mb-1"><strong>Viện Phát triển Nguồn lực – Đại học Trà Vinh</strong></p>
+                <p class="text-secondary"><strong>Dự án:</strong> Auto-Slide Creator – Chuyển đổi tài liệu thành Slides tùy chỉnh</p>
+              </section>
+
+              <!-- PROJECTS -->
+              <section class="mb-5">
+                <h2 class="section-title"><i class="bi bi-code-slash text-primary"></i> DỰ ÁN NỔI BẬT</h2>
+                
+                <div class="project-item">
+                  <h3 class="h6 fw-bold text-primary mb-2">TVU – Hệ thống quản lý hồ sơ viên chức đi nước ngoài</h3>
+                  <div class="mb-2">
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Express.js</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">Gemini API</span>
+                    <span class="skill-badge">Docker</span>
+                  </div>
+                  <ul class="text-secondary small mb-0 ps-3">
+                    <li class="mb-1">Phát triển frontend với React và backend REST API với Node.js/Express.</li>
+                    <li class="mb-1">Làm việc với PostgreSQL và authentication/authorization.</li>
+                    <li class="mb-1">Tích hợp Gemini API vào các chức năng AI của hệ thống.</li>
+                  </ul>
+                </div>
+
+                <div class="project-item">
+                  <h3 class="h6 fw-bold text-primary mb-2">LinkUp – Community Chat & AI Assistant</h3>
+                  <div class="mb-2">
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">TypeScript</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">FastAPI</span>
+                    <span class="skill-badge">MongoDB</span>
+                    <span class="skill-badge">Gemini API</span>
+                  </div>
+                  <ul class="text-secondary small mb-0 ps-3">
+                    <li class="mb-1">Phát triển ứng dụng chat cá nhân và nhóm bằng React/TypeScript.</li>
+                    <li class="mb-1">Xây dựng backend API bằng Python/FastAPI.</li>
+                    <li class="mb-1">Tích hợp Gemini API cho AI Assistant và các chức năng AI.</li>
+                  </ul>
+                </div>
+
+                <div class="project-item">
+                  <h3 class="h6 fw-bold text-primary mb-2">GrowTech – E-commerce Laptop</h3>
+                  <div class="mb-2">
+                    <span class="skill-badge">PHP</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Bootstrap</span>
+                    <span class="skill-badge">AJAX</span>
+                  </div>
+                  <ul class="text-secondary small mb-0 ps-3">
+                    <li class="mb-1">Phát triển website thương mại điện tử với chức năng sản phẩm, giỏ hàng và đặt hàng.</li>
+                    <li class="mb-1">Xây dựng chức năng quản trị sản phẩm và đơn hàng.</li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- CERTIFICATION -->
+              <section class="mb-5">
+                <h2 class="section-title"><i class="bi bi-award text-primary"></i> CHỨNG CHỈ</h2>
+                <div class="mb-2">
+                  <h3 class="h6 fw-bold text-primary mb-1">Google UX Design Professional Certificate</h3>
+                  <p class="text-secondary small mb-0">Google / Coursera | 09/11/2025</p>
+                </div>
+              </section>
+
+              <!-- CAREER OBJECTIVE -->
+              <section>
+                <h2 class="section-title"><i class="bi bi-bullseye text-primary"></i> MỤC TIÊU NGHỀ NGHIỆP</h2>
+                <p class="text-secondary small text-justify">
+                  Ứng tuyển vị trí <strong>Intern / Fresher Full-stack Developer</strong>, định hướng phát triển chuyên sâu về frontend, backend và xây dựng các ứng dụng web thực tế.
+                </p>
+              </section>
+            </div>
+          </main>
+        </div>
+      </div>
+      <footer class="text-center mt-4 pb-4">
+        <p class="text-secondary small mb-0">© 2026 Đào Công Hoàng Lam</p>
+      </footer>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
