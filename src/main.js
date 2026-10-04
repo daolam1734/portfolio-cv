@@ -82,6 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const projects = await response.json();
         projectsContainer.innerHTML = ''; // Clear loading spinner
         
+        if (projects.length === 0) {
+          projectsContainer.innerHTML = `<div class="col-12 text-center text-secondary py-5"><i class="bi bi-folder2-open fs-1"></i><p class="mt-2">No projects to display yet. Add data to /api/projects.json.</p></div>`;
+          return;
+        }
+
         projects.forEach((proj, index) => {
           const badges = proj.tech_stack.map(tech => `<span class="skill-badge">${tech}</span>`).join('');
           const cardHtml = `
