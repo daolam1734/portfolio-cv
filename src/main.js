@@ -228,4 +228,48 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // --- Background Music Logic ---
+  const musicBtn = document.getElementById('music-btn');
+  const bgMusic = document.getElementById('bg-music');
+  const musicIcon = document.getElementById('music-icon');
+  
+  if (musicBtn && bgMusic) {
+    let hasInteracted = false;
+    bgMusic.volume = 0.5; // Set volume to 50% so it's not too loud
+    
+    // Autoplay on first interaction to bypass browser autoplay restrictions
+    const playMusicOnInteraction = () => {
+      if (!hasInteracted) {
+        hasInteracted = true;
+        bgMusic.play().then(() => {
+          musicIcon.className = "bi bi-volume-up-fill fs-4";
+        }).catch((err) => {
+          console.warn("Autoplay blocked or failed:", err);
+        });
+        
+        // Clean up listeners
+        ['click', 'scroll', 'keydown', 'touchstart'].forEach(evt => {
+          document.removeEventListener(evt, playMusicOnInteraction);
+        });
+      }
+    };
+
+    ['click', 'scroll', 'keydown', 'touchstart'].forEach(evt => {
+      document.addEventListener(evt, playMusicOnInteraction, { once: true });
+    });
+
+    // Manual toggle via button
+    musicBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); 
+      hasInteracted = true; 
+      if (bgMusic.paused) {
+        bgMusic.play();
+        musicIcon.className = "bi bi-volume-up-fill fs-4";
+      } else {
+        bgMusic.pause();
+        musicIcon.className = "bi bi-volume-mute-fill fs-4";
+      }
+    });
+  }
 });

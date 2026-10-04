@@ -214,6 +214,17 @@
 
     </div>
     
+    <!-- Music Player -->
+    <div class="music-player position-fixed bottom-0 end-0 m-4" style="z-index: 100;">
+      <button id="music-btn" class="btn btn-outline-info text-primary border-primary rounded-circle d-flex align-items-center justify-content-center neon-btn bg-dark" style="width: 50px; height: 50px; backdrop-filter: blur(5px);" title="Toggle Music">
+        <i class="bi bi-volume-mute-fill fs-4" id="music-icon"></i>
+      </button>
+      <!-- Vui lòng tải 1 bài nhạc mp3 vào thư mục public và đổi tên thành bg-music.mp3 -->
+      <audio id="bg-music" loop>
+        <source src="/bg-music.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
     <footer class="text-center py-4 position-relative z-1 border-top border-primary-subtle bg-dark">
       <p class="text-secondary small mb-0">© 2026 Dao Cong Hoang Lam. All rights reserved.</p>
     </footer>
