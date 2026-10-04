@@ -8,40 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
-  <body style="background-color: #fff0f5; font-family: 'Outfit', sans-serif;">
+  <body>
+    <!-- Universe Tech Background -->
+    <div class="starfield" id="starfield"></div>
+
     <div class="container py-5">
       <div class="cv-page p-4 p-md-5">
-        
-        <!-- Chibi Animations Container -->
-        <div class="chibi-container" style="top: 2%; left: 3%;">
-          <span class="chibi chibi-bounce">🐰</span>
-        </div>
-        <div class="chibi-container" style="top: 5%; right: 5%;">
-          <span class="chibi chibi-float">🐱</span>
-        </div>
-        <div class="chibi-container" style="bottom: 5%; left: 4%;">
-          <span class="chibi chibi-wiggle">🐻</span>
-        </div>
-        <div class="chibi-container" style="bottom: 8%; right: 4%;">
-          <span class="chibi chibi-bounce">🐹</span>
-        </div>
-        <div class="chibi-container" style="top: 45%; left: 1%;">
-          <span class="chibi chibi-pulse" style="font-size: 2rem; opacity: 0.6;">🐾</span>
-        </div>
-        <div class="chibi-container" style="top: 50%; right: 1%;">
-          <span class="chibi chibi-float" style="font-size: 2.5rem; opacity: 0.7;">🌸</span>
-        </div>
-        <div class="chibi-container" style="top: 25%; left: 45%;">
-          <span class="chibi chibi-wiggle" style="font-size: 2rem; opacity: 0.5;">✨</span>
-        </div>
-
         <div class="content-wrapper">
           <!-- HEADER -->
-          <header class="cv-header row align-items-center mb-5 pb-4 border-bottom" style="border-color: rgba(255, 105, 180, 0.2) !important;">
+          <header class="cv-header row align-items-center mb-5 pb-4 border-bottom border-primary-subtle">
             <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
-              <img src="/profile.jpg" alt="Đào Công Hoàng Lam" class="profile-img shadow-sm" onerror="this.src='https://ui-avatars.com/api/?name=Hoang+Lam&background=ffe4e1&color=ff69b4&size=130'"/>
+              <img src="/profile.jpg" alt="Đào Công Hoàng Lam" class="profile-img shadow-sm" onerror="this.src='https://ui-avatars.com/api/?name=Hoang+Lam&background=1a1a2e&color=00f0ff&size=130'"/>
             </div>
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 border-md-end" style="border-color: rgba(255, 105, 180, 0.2) !important;">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 border-md-end border-primary-subtle">
               <h1 class="text-uppercase fw-bold text-primary mb-1">Đào Công Hoàng Lam</h1>
               <h2 class="h6 text-secondary fw-medium mb-3 letter-spacing-1">FULL-STACK DEVELOPER</h2>
               <div class="row g-2 contact-info text-start px-3 px-md-0">
@@ -82,7 +61,7 @@
             <aside class="col-lg-4 cv-left pe-lg-4">
               <!-- SUMMARY -->
               <section class="mb-5">
-                <h2 class="section-title"><i class="bi bi-person text-primary"></i> TÓM TẮT CHUYÊN MÔN</h2>
+                <h2 class="section-title"><i class="bi bi-person"></i> TÓM TẮT CHUYÊN MÔN</h2>
                 <p class="text-secondary small text-justify">
                   Sinh viên Kỹ thuật Phần mềm định hướng <strong>Full-stack Development</strong>, có kinh nghiệm xây dựng ứng dụng web với React, TypeScript, Node.js, Python và FastAPI.
                 </p>
@@ -93,7 +72,7 @@
 
               <!-- SKILLS -->
               <section class="mb-5">
-                <h2 class="section-title"><i class="bi bi-gear text-primary"></i> KỸ NĂNG</h2>
+                <h2 class="section-title"><i class="bi bi-cpu"></i> KỸ NĂNG</h2>
                 
                 <div class="mb-3">
                   <strong class="d-block mb-2 text-primary">Ngôn ngữ lập trình</strong>
@@ -166,10 +145,10 @@
             </aside>
 
             <!-- RIGHT COLUMN -->
-            <div class="col-lg-8 cv-right ps-lg-4 border-lg-start" style="border-color: rgba(255, 105, 180, 0.2) !important;">
+            <div class="col-lg-8 cv-right ps-lg-4 border-lg-start border-primary-subtle">
               <!-- EDUCATION -->
               <section class="mb-5">
-                <h2 class="section-title"><i class="bi bi-mortarboard text-primary"></i> HỌC VẤN</h2>
+                <h2 class="section-title"><i class="bi bi-mortarboard"></i> HỌC VẤN</h2>
                 <div class="d-flex gap-3 align-items-center mb-2">
                   <span class="timeline-badge">2022 – 2026</span>
                   <span class="text-secondary small"><i class="bi bi-geo-alt me-1"></i>Trà Vinh</span>
@@ -181,7 +160,7 @@
 
               <!-- EXPERIENCE -->
               <section class="mb-5">
-                <h2 class="section-title"><i class="bi bi-briefcase text-primary"></i> KINH NGHIỆM</h2>
+                <h2 class="section-title"><i class="bi bi-briefcase"></i> KINH NGHIỆM</h2>
                 <div class="d-flex gap-3 align-items-center mb-2">
                   <span class="timeline-badge">06/2026 – 08/2026</span>
                   <span class="text-secondary small"><i class="bi bi-geo-alt me-1"></i>Trà Vinh</span>
@@ -193,7 +172,7 @@
 
               <!-- PROJECTS -->
               <section class="mb-5">
-                <h2 class="section-title"><i class="bi bi-code-slash text-primary"></i> DỰ ÁN NỔI BẬT</h2>
+                <h2 class="section-title"><i class="bi bi-terminal"></i> DỰ ÁN NỔI BẬT</h2>
                 
                 <div class="project-item">
                   <h3 class="h6 fw-bold text-primary mb-2">TVU – Hệ thống quản lý hồ sơ viên chức đi nước ngoài</h3>
@@ -247,7 +226,7 @@
 
               <!-- CERTIFICATION -->
               <section class="mb-5">
-                <h2 class="section-title"><i class="bi bi-award text-primary"></i> CHỨNG CHỈ</h2>
+                <h2 class="section-title"><i class="bi bi-award"></i> CHỨNG CHỈ</h2>
                 <div class="mb-2">
                   <h3 class="h6 fw-bold text-primary mb-1">Google UX Design Professional Certificate</h3>
                   <p class="text-secondary small mb-0">Google / Coursera | 09/11/2025</p>
@@ -256,7 +235,7 @@
 
               <!-- CAREER OBJECTIVE -->
               <section>
-                <h2 class="section-title"><i class="bi bi-bullseye text-primary"></i> MỤC TIÊU NGHỀ NGHIỆP</h2>
+                <h2 class="section-title"><i class="bi bi-bullseye"></i> MỤC TIÊU NGHỀ NGHIỆP</h2>
                 <p class="text-secondary small text-justify">
                   Ứng tuyển vị trí <strong>Intern / Fresher Full-stack Developer</strong>, định hướng phát triển chuyên sâu về frontend, backend và xây dựng các ứng dụng web thực tế.
                 </p>
@@ -265,7 +244,7 @@
           </main>
         </div>
       </div>
-      <footer class="text-center mt-4 pb-4">
+      <footer class="text-center mt-4 pb-4 position-relative z-1">
         <p class="text-secondary small mb-0">© 2026 Đào Công Hoàng Lam</p>
       </footer>
     </div>

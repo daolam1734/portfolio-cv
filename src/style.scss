@@ -1,26 +1,35 @@
 // src/style.scss
 
-// 1. Custom variables for Pink/White Theme
-$primary: #ff69b4; // Hot pink
-$secondary: #8b737c;
-$body-bg: #fff0f5; // Lavender blush
-$body-color: #5c4b51;
-$info: #ffe4e1; // Misty rose
-
+// 1. Custom variables for Tech/Universe Theme
+$primary: #00f0ff; // Neon cyan
+$secondary: #a0a5b5; // Light slate
+$body-bg: #050510; // Deep space black
+$body-color: #e0e5f5;
+$info: #1a1a2e; // Dark blue gray for cards
 $font-family-base: 'Outfit', sans-serif;
-$headings-color: #d1497b;
+$headings-color: #ffffff;
 $headings-font-weight: 700;
 
 // 2. Import Bootstrap
 @import "bootstrap/scss/bootstrap";
 
 // 3. Custom Component Styles
+body {
+  background-color: $body-bg !important;
+  color: $body-color;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(176, 38, 255, 0.05), transparent 25%);
+}
+
 .cv-page {
-  background-color: #ffffff;
+  background-color: rgba(10, 10, 25, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 1rem;
-  box-shadow: 0 10px 25px -5px rgba(255, 105, 180, 0.15), 0 8px 10px -6px rgba(255, 105, 180, 0.1);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
   position: relative;
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -29,41 +38,43 @@ $headings-font-weight: 700;
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid $info;
-}
-
-.chibi-container {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  user-select: none;
-}
-
-.chibi {
-  font-size: 3rem;
-  display: inline-block;
-  filter: drop-shadow(0 4px 6px rgba(255, 105, 180, 0.3));
+  border: 2px solid $primary;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
+  }
 }
 
 .timeline-badge {
-  background-color: $info;
+  background-color: rgba(0, 240, 255, 0.1);
   color: $primary;
+  border: 1px solid rgba(0, 240, 255, 0.3);
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 0.85rem;
+  box-shadow: inset 0 0 5px rgba(0, 240, 255, 0.1);
 }
 
 .skill-badge {
-  background-color: $info;
-  color: $primary;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 5px rgba(0, 240, 255, 0.2);
   padding: 0.3rem 0.8rem;
-  border-radius: 9999px;
+  border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   display: inline-block;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+    transform: translateY(-2px);
+  }
 }
 
 .section-title {
@@ -71,34 +82,71 @@ $headings-font-weight: 700;
   align-items: center;
   gap: 0.5rem;
   text-transform: uppercase;
-  border-bottom: 2px solid $info;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.3);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-  color: $headings-color;
+  color: $primary;
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
 }
 
 .project-item {
-  border-bottom: 1px dashed rgba(255, 105, 180, 0.2);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
   &:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+  &:hover {
+    transform: translateX(5px);
   }
 }
 
 .contact-link {
   text-decoration: none;
   color: $secondary;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   &:hover {
     color: $primary;
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
   }
 }
 
-.content-wrapper {
-  position: relative;
-  z-index: 10;
+.text-primary {
+  color: $primary !important;
+}
+.text-secondary {
+  color: $secondary !important;
+}
+.border-primary-subtle {
+  border-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+// Background tech elements
+.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px white;
+}
+.tech-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, $primary, transparent);
+  height: 2px;
+  width: 100px;
+  opacity: 0;
+  box-shadow: 0 0 10px $primary;
 }

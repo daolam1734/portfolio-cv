@@ -3,48 +3,73 @@ import * as bootstrap from 'bootstrap';
 import gsap from 'gsap';
 
 document.addEventListener("DOMContentLoaded", () => {
-  // GSAP Animations for Chibi Elements
+  // Universe Tech Background Animations
+  const starfield = document.getElementById("starfield");
   
-  // Bounce animation
-  gsap.to(".chibi-bounce", {
-    y: -15,
-    scale: 1.05,
-    duration: 1.5,
-    yoyo: true,
-    repeat: -1,
-    ease: "power1.inOut"
-  });
+  if (starfield) {
+    // Create stars
+    for (let i = 0; i < 60; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      
+      // Randomize star properties
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.opacity = Math.random();
+      
+      starfield.appendChild(star);
 
-  // Float animation
-  gsap.to(".chibi-float", {
-    y: -10,
-    rotation: 8,
+      // Twinkle animation
+      gsap.to(star, {
+        opacity: Math.random() * 0.5 + 0.5,
+        duration: Math.random() * 2 + 1,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+        delay: Math.random() * 2
+      });
+    }
+
+    // Create tech scanning lines (shooting stars / data streams)
+    for (let i = 0; i < 4; i++) {
+      const line = document.createElement("div");
+      line.className = "tech-line";
+      starfield.appendChild(line);
+
+      function animateLine(el) {
+        gsap.set(el, {
+          left: "-150px",
+          top: `${Math.random() * 100}%`,
+          width: `${Math.random() * 200 + 50}px`,
+          opacity: 0
+        });
+
+        gsap.to(el, {
+          left: "100%",
+          opacity: 1,
+          duration: Math.random() * 2 + 1.5,
+          ease: "power1.inOut",
+          onComplete: () => {
+            gsap.delayedCall(Math.random() * 4, () => animateLine(el));
+          }
+        });
+      }
+      
+      animateLine(line);
+    }
+  }
+
+  // Initial load animation for UI components
+  gsap.from(".cv-page", {
+    boxShadow: "0 0 0px rgba(0, 240, 255, 0)",
+    borderColor: "rgba(0, 240, 255, 0)",
     duration: 2,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut"
+    ease: "power2.out"
   });
 
-  // Wiggle animation
-  gsap.to(".chibi-wiggle", {
-    rotation: 15,
-    duration: 1.25,
-    yoyo: true,
-    repeat: -1,
-    ease: "power1.inOut"
-  });
-
-  // Pulse animation
-  gsap.to(".chibi-pulse", {
-    scale: 1.1,
-    opacity: 1,
-    duration: 1,
-    yoyo: true,
-    repeat: -1,
-    ease: "power1.inOut"
-  });
-
-  // Optional: Add entrance animation for the main layout
   gsap.from(".cv-header", {
     opacity: 0,
     y: -30,
